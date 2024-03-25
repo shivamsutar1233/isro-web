@@ -2,32 +2,35 @@ import React from "react";
 import isro_image from "../assets/ISRO-Color.svg";
 import { labels, languages, navbarLinks } from "../resources/en-us";
 import { IoSearch } from "react-icons/io5";
-import { RxDividerVertical } from "react-icons/rx";
 import enblem from "../assets/Emblem_of_India.png";
-import { FormControl, Link, MenuItem, Select } from "@mui/material";
+import { FormControl, Link } from "@mui/material";
 const Navbar = () => {
   return (
-    <div className=" flex flex-row justify-between items-center p-2 bg-transparent">
+    <div className=" flex flex-row justify-between items-center px-6 py-1 pt-3  bg-transparent bg-opacity-5 bg-slate-600">
       {/* Logo and title */}
-      <div className=" flex flex-row py-3">
+      <Link href="/" underline="none" className=" flex flex-row ">
         <div className=" w-24 ">
-          <img src={isro_image} alt="ISRO_LOGO" />
+          <img
+            src={isro_image}
+            className=" hover:cursor-pointer"
+            alt="ISRO_LOGO"
+          />
         </div>
         <div className=" border-l border-gray-700 mx-3 ">
           {/* <RxDividerVertical /> */}
         </div>
         <div className="">
-          <h1 className=" font-bold text-[1.2rem] font-sans text-white">
+          <h1 className=" font-bold text-[1.2rem] font-sans text-white hover:cursor-pointer">
             {labels.indianSpace}
           </h1>
-          <h1 className=" font-bold text-[1.2rem] font-sans text-white">
+          <h1 className=" font-bold text-[1.2rem] font-sans text-white hover:cursor-pointer">
             {labels.reaserchOrganization}
           </h1>
-          <h1 className="  text-[1.2rem] font-sans text-white">
+          <h1 className="  text-[1.2rem] font-sans text-white hover:cursor-pointer">
             {labels.departmentOfSapce}
           </h1>
         </div>
-      </div>
+      </Link>
       {/* Navigation list  */}
       <div className="">
         <nav>
@@ -35,9 +38,9 @@ const Navbar = () => {
             <Link
               href={link.link}
               underline="none"
-              className=" p-2 px-5 font-sans font-bold"
+              className=" p-2 px-8 font-sans font-bold"
               sx={{ fontSize: "1rem", fontWeight: 500 }}
-              color={link.label === "Home" ? "orange" : "white"}
+              color={link.label === "Home" ? "rgb(234 88 12)" : "white"}
             >
               {link.label}
             </Link>
@@ -45,7 +48,7 @@ const Navbar = () => {
         </nav>
       </div>
       {/* Search and language options with GOI enblem */}
-      <div className=" flex  flex-row py-3 justify-between items-center gap-8">
+      <div className=" flex  flex-row justify-between items-center gap-8">
         <div className="flex  flex-row justify-between items-center py-4">
           <div className="">
             <IoSearch size={25} color="white" />
@@ -55,19 +58,16 @@ const Navbar = () => {
           </div>
           <div className="">
             <FormControl size="small" sx={{ color: "white" }}>
-              <Select
+              <select
                 defaultValue={languages.en}
-                variant="standard"
-                disableUnderline={true}
-                className=" text-white"
-                color="white"
+                className=" border-none outline-none bg-transparent"
               >
                 {Object.keys(languages).map((language) => (
-                  <MenuItem value={languages[language]}>
+                  <option value={languages[language]}>
                     {languages[language]}
-                  </MenuItem>
+                  </option>
                 ))}
-              </Select>
+              </select>
             </FormControl>
           </div>
         </div>

@@ -2,6 +2,13 @@ export const labels = {
   indianSpace: "Indian Space",
   reaserchOrganization: "Research Organization",
   departmentOfSapce: "Department of Space",
+  welcomeToThe: "Welcome to the",
+  welcome: "Welcome",
+  solarSystem: "Solar system",
+  chandrayaan: "Chandrayaan",
+  chandrayaan2: "Chandrayaan2",
+  moonLandingSites: "Moon landing sites",
+  vikramLander: "Vikran lander",
 };
 
 export const navbarLinks = [
