@@ -9,7 +9,7 @@ const Navbar = () => {
     <div className=" flex flex-row justify-between items-center px-6 py-1 pt-3  bg-transparent bg-opacity-5 bg-slate-600">
       {/* Logo and title */}
       <Link href="/" underline="none" className=" flex flex-row ">
-        <div className=" w-24 ">
+        <div className=" w-24">
           <img
             src={isro_image}
             className=" hover:cursor-pointer"
@@ -38,7 +38,7 @@ const Navbar = () => {
             <Link
               href={link.link}
               underline="none"
-              className=" p-2 px-8 font-sans font-bold"
+              className="px-8  font-sans font-bold"
               sx={{ fontSize: "1rem", fontWeight: 500 }}
               color={link.label === "Home" ? "rgb(234 88 12)" : "white"}
             >

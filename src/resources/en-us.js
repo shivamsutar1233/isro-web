@@ -6,9 +6,14 @@ export const labels = {
   welcome: "Welcome",
   solarSystem: "Solar system",
   chandrayaan: "Chandrayaan",
-  chandrayaan2: "Chandrayaan2",
+  chandrayaan2: "Chandrayaan 2",
   moonLandingSites: "Moon landing sites",
   vikramLander: "Vikran lander",
+  knowMore: "Know more",
+  mission: "Mission",
+  southPole: "South pole",
+  moonLanding: "Moon landing",
+  glimpseOfRover: "Glipmse of rover",
 };
 
 export const navbarLinks = [
