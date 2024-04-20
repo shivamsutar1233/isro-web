@@ -1,11 +1,14 @@
+import FlashNews from "./components/FlashNews";
 import HeroSection from "./components/HeroSection";
+import KeyLinks from "./components/KeyLinks";
 import Navbar from "./components/Navbar";
-import "bootstrap/dist/css/bootstrap.min.css";
 function App() {
   return (
     <div className=" relative">
       <HeroSection />
       <Navbar />
+      <FlashNews />
+      <KeyLinks />
     </div>
   );
 }
