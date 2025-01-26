@@ -1,5 +1,4 @@
-import React from "react";
-import earthRotation from "../assets/rotation_of_the_planet_earth.mp4";
+import earthRotation from "../assets/hero-india.mp4";
 import solarSysten from "../assets/solar_system.mp4";
 import chanarayaan2 from "../assets/chandrayaan2.mp4";
 import moonLandingSites from "../assets/moon_landing.mp4";
@@ -93,9 +92,9 @@ const HeroSection = () => {
   };
 
   return (
-    <div className=" absolute top-0 left-0 -z-50 w-full h-full">
+    <div className=" relative top-0 left-0 -z-50 w-full h-full">
       <div className=" relative">
-        <Carousel>
+        <Carousel controls={false}>
           {herosectionCarousel.map((slide) => singleSlide(slide))}
         </Carousel>
       </div>

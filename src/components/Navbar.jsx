@@ -1,4 +1,3 @@
-import React from "react";
 import isro_image from "../assets/ISRO-Color.svg";
 import { labels, languages, navbarLinks } from "../resources/en-us";
 import { IoSearch } from "react-icons/io5";
@@ -6,7 +5,7 @@ import enblem from "../assets/Emblem_of_India.png";
 import { FormControl, Link } from "@mui/material";
 const Navbar = () => {
   return (
-    <div className=" flex flex-row justify-between items-center px-6 py-1 pt-3  bg-transparent bg-opacity-5 bg-slate-600">
+    <div className=" flex flex-row fixed top-0 justify-between items-center px-6 py-1 pt-3  bg-opacity-5 bg-slate-700 w-full">
       {/* Logo and title */}
       <Link href="/" underline="none" className=" flex flex-row ">
         <div className=" w-24">

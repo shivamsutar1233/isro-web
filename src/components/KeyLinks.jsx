@@ -1,4 +1,3 @@
-import React from "react";
 import { labels } from "../resources/en-us";
 import { AiOutlineVideoCamera } from "react-icons/ai";
 import { MdWork } from "react-icons/md";
@@ -36,7 +35,7 @@ const KeyLinks = () => {
 
   const singleKeyLinkTile = ({ icon, title, description, link }) => {
     return (
-      <div className=" border bg-slate-600 bg-opacity-15 border-gray-800 rounded-xl  p-3 w-[20rem] h-[10rem] hover:bg-opacity-5  relative">
+      <div className=" border-1 bg-slate-600 bg-opacity-15 border-slate-700 rounded-xl  p-3 w-[20rem] h-[10rem] hover:bg-opacity-5  relative">
         <div className="p-1">{icon}</div>
         <h3 className=" text-gray-300 text-[1.4rem]">{title}</h3>
         <p className=" text-gray-500 text-[1rem]">{description}</p>
