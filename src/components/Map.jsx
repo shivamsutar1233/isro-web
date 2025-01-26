@@ -5,46 +5,54 @@ import {
   Marker,
   ZoomableGroup,
 } from "react-simple-maps";
-import mapJson from "../assets/ne_110m_land.json";
-const geoUrl =
-  "https://raw.githubusercontent.com/deldersveld/topojson/master/continents/south-america.json";
-
-const markers = [
-  {
-    markerOffset: -15,
-    name: "Akluj",
-    coordinates: [75.01666667, 17.88333333],
-  },
-];
+import indiaTopoJson from "../assets/map.topojson";
 
 const Map = () => {
+  const markers = [
+    { name: "New Delhi", coordinates: [77.209, 28.613] },
+    { name: "Mumbai", coordinates: [72.8777, 19.076] },
+    { name: "Chennai", coordinates: [80.2707, 13.0827] },
+    { name: "Kolkata", coordinates: [88.3639, 22.5726] },
+  ];
   return (
     <ComposableMap
       projection="geoMercator"
       projectionConfig={{
-        // scale: , // Adjust the scale for India
-        center: [78.9629, 22.5937], // Coordinates to center on India [Longitude, Latitude]
+        scale: 1000,
+        center: [78.9629, 22.5937],
       }}
     >
-      <ZoomableGroup zoom={1}>
-        <Geographies geography={mapJson}>
+      <ZoomableGroup>
+        <Geographies geography={indiaTopoJson}>
           {({ geographies }) =>
             geographies.map((geo) => (
               <Geography
                 key={geo.rsmKey}
                 geography={geo}
-                fill="#EAEAEC"
-                stroke="#D6D6DA"
+                style={{
+                  default: {
+                    fill: "#D6D6DA",
+                    outline: "none",
+                  },
+                  hover: {
+                    fill: "#F53",
+                    outline: "none",
+                  },
+                  pressed: {
+                    fill: "#E42",
+                    outline: "none",
+                  },
+                }}
               />
             ))
           }
         </Geographies>
-        {markers.map(({ name, coordinates, markerOffset }) => (
+        {markers.map(({ name, coordinates }) => (
           <Marker key={name} coordinates={coordinates}>
-            <circle r={10} fill="#F00" stroke="#fff" strokeWidth={2} />
+            <circle r={5} fill="#F53" stroke="#FFF" strokeWidth={2} />
             <text
               textAnchor="middle"
-              y={markerOffset}
+              y={-10}
               style={{ fontFamily: "system-ui", fill: "#5D5A6D" }}
             >
               {name}

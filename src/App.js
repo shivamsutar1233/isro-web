@@ -6,6 +6,7 @@ import LatestNews from "./components/LatestNews";
 import Navbar from "./components/Navbar";
 import { grey } from "@mui/material/colors";
 import Footer from "./components/Footer";
+import Map from "./components/Map";
 function App() {
   const theme = createTheme({
     colorSchemes: {
@@ -42,7 +43,7 @@ function App() {
         <FlashNews />
         <KeyLinks />
         <LatestNews />
-        {/* <Map /> */}
+        <Map />
         <Footer />
       </div>
     </ThemeProvider>
