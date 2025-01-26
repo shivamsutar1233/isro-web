@@ -103,19 +103,17 @@ const IndiaMapWithISROCenters = () => {
                   geography={geo}
                   style={{
                     default: {
-                      fill: "#e2e2e28",
-                      stroke: "#e2e2e276",
-                      strokeWidth: 0.5,
+                      fill: "#fefefe11",
+                      stroke: "#fff",
+                      strokeWidth: "0.1",
                     },
                     hover: {
-                      fill: "#e2e2e276",
-                      stroke: "#e2e2e276",
-                      strokeWidth: 0.5,
+                      fill: "#ffffff78",
+                      stroke: "#fff",
                     },
                     pressed: {
-                      fill: "#e2e2e276",
-                      stroke: "#e2e2e276",
-                      strokeWidth: 0.5,
+                      fill: "#ffffff78",
+                      stroke: "#fff",
                     },
                   }}
                 />
