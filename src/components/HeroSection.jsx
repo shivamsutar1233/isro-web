@@ -17,7 +17,7 @@ const HeroSection = () => {
       mainHeading1: labels.indianSpace,
       mainHeading2: labels.reaserchOrganization,
       shortDescription:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla ad fugit soluta unde possimus inventore molestias, veniam veritatis rerum velit tempore odit sint ut, suscipit perspiciatis iure deleniti natus! Cumque dolore quod asperiores ex hic officia molestias laborum fugiat culpa perspiciatis dolores vitae mollitia provident, repellat assumenda non sit quae.",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla ad fugit soluta unde possim.",
       caption: labels.welcome,
     },
     {
@@ -26,7 +26,7 @@ const HeroSection = () => {
       mainHeading1: labels.indianSpace,
       mainHeading2: labels.reaserchOrganization,
       shortDescription:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla ad fugit soluta unde possimus inventore molestias, veniam veritatis rerum velit tempore odit sint ut, suscipit perspiciatis iure deleniti natus! Cumque dolore quod asperiores ex hic officia molestias laborum fugiat culpa perspiciatis dolores vitae mollitia provident, repellat assumenda non sit quae.",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla ad fugit soluta unde possim.",
       caption: labels.solarSystem,
     },
     {
@@ -35,7 +35,7 @@ const HeroSection = () => {
       mainHeading1: labels.chandrayaan2,
       mainHeading2: "",
       shortDescription:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla ad fugit soluta unde possimus inventore molestias, veniam veritatis rerum velit tempore odit sint ut, suscipit perspiciatis iure deleniti natus! Cumque dolore quod asperiores ex hic officia molestias laborum fugiat culpa perspiciatis dolores vitae mollitia provident, repellat assumenda non sit quae.",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla ad fugit soluta unde possim.",
       caption: labels.chandrayaan2,
     },
     {
@@ -44,7 +44,7 @@ const HeroSection = () => {
       mainHeading1: labels.southPole,
       mainHeading2: labels.moonLanding,
       shortDescription:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla ad fugit soluta unde possimus inventore molestias, veniam veritatis rerum velit tempore odit sint ut, suscipit perspiciatis iure deleniti natus! Cumque dolore quod asperiores ex hic officia molestias laborum fugiat culpa perspiciatis dolores vitae mollitia provident, repellat assumenda non sit quae.",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla ad fugit soluta unde possim.",
       caption: labels.moonLandingSites,
     },
     {
@@ -53,7 +53,7 @@ const HeroSection = () => {
       mainHeading1: labels.vikramLander,
       mainHeading2: "",
       shortDescription:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla ad fugit soluta unde possimus inventore molestias, veniam veritatis rerum velit tempore odit sint ut, suscipit perspiciatis iure deleniti natus! Cumque dolore quod asperiores ex hic officia molestias laborum fugiat culpa perspiciatis dolores vitae mollitia provident, repellat assumenda non sit quae.",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla ad fugit soluta unde possim.",
       caption: labels.vikramLander,
     },
   ];
@@ -67,11 +67,11 @@ const HeroSection = () => {
     shortDescription,
   }) => {
     return (
-      <Carousel.Item>
+      <Carousel.Item interval={10000}>
         <video autoPlay loop muted>
           <source src={videoName} type="video/mp4" />
         </video>
-        <div className=" absolute top-[30%] left-[10%] w-[60%]">
+        <div className=" absolute top-[60%] left-[8%] w-[50%] bg-white p-6 rounded-md bg-opacity-10">
           <h1 className=" font-extrabold text-3xl text-orange-600 leading-tight">
             {subHeading}
           </h1>
@@ -82,7 +82,13 @@ const HeroSection = () => {
             {mainHeading2}
           </h1>
           <p className=" text-white text-[1.4rem]">{shortDescription}</p>
-          <Button className=" z-40" variant="outlined" endIcon={<EastIcon />}>
+          <Button
+            className=" z-40"
+            variant="text"
+            sx={{ color: "#fff" }}
+            // color="#fff"
+            endIcon={<EastIcon />}
+          >
             {labels.knowMore}
           </Button>
         </div>
@@ -92,9 +98,9 @@ const HeroSection = () => {
   };
 
   return (
-    <div className=" relative top-0 left-0 -z-50 w-full h-full">
+    <div className=" relative top-0 left-0 z-50 w-full h-full">
       <div className=" relative">
-        <Carousel controls={false}>
+        <Carousel>
           {herosectionCarousel.map((slide) => singleSlide(slide))}
         </Carousel>
       </div>

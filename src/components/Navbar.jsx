@@ -24,7 +24,7 @@ const Navbar = () => {
   }, []);
   return (
     <div
-      className={` z-50 flex flex-row fixed top-0 justify-between items-center px-6 py-1 pt-3   bg-slate-700 w-full ${
+      className={` z-50 flex flex-row fixed top-0 justify-between items-center px-6 py-1 pt-3   bg-gray-900 w-full ${
         scrolled ? "bg-opacity-65" : "bg-opacity-5"
       }`}
     >
