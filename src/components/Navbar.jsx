@@ -3,11 +3,33 @@ import { labels, languages, navbarLinks } from "../resources/en-us";
 import { IoSearch } from "react-icons/io5";
 import enblem from "../assets/Emblem_of_India.png";
 import { FormControl, Link } from "@mui/material";
+import { useEffect, useState } from "react";
 const Navbar = () => {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 200) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
-    <div className=" flex flex-row fixed top-0 justify-between items-center px-6 py-1 pt-3  bg-opacity-5 bg-slate-700 w-full">
+    <div
+      className={` z-50 flex flex-row fixed top-0 justify-between items-center px-6 py-1 pt-3   bg-slate-700 w-full ${
+        scrolled ? "bg-opacity-65" : "bg-opacity-5"
+      }`}
+    >
       {/* Logo and title */}
-      <Link href="/" underline="none" className=" flex flex-row ">
+      <Link href="/" underline="none" className=" flex flex-row blur-none ">
         <div className=" w-24">
           <img
             src={isro_image}

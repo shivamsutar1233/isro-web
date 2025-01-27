@@ -1,4 +1,4 @@
-import { createTheme, CssBaseline, ThemeProvider } from "@mui/material";
+import { createTheme, ThemeProvider } from "@mui/material";
 import FlashNews from "./components/FlashNews";
 import HeroSection from "./components/HeroSection";
 import KeyLinks from "./components/KeyLinks";
@@ -36,7 +36,7 @@ function App() {
   });
   return (
     <ThemeProvider theme={theme}>
-      <CssBaseline />
+      {/* <CssBaseline /> */}
       <div className=" relative">
         <HeroSection />
         <Navbar />
