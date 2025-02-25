@@ -92,7 +92,11 @@ const Footer = () => {
       <section className=" text-center text-slate-300">
         {new Date().getFullYear()} Alpha Square Official. All Rights Reserved.
         Designed by{" "}
-        <a href="https://www.instagram.com/hemz.designs/" target="_blank">
+        <a
+          href="https://www.instagram.com/hemz.designs/"
+          target="_blank"
+          className="text-decoration-none"
+        >
           Hemanth kotla
         </a>
       </section>
