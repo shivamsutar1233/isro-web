@@ -33,10 +33,8 @@ export const labels = {
 export const navbarLinks = [
   { label: "Home", link: "#Home" },
   { label: "About", link: "#About" },
-  { label: "Activities", link: "#Activities" },
   { label: "Services", link: "#Services" },
   { label: "Programs", link: "#Programs" },
-  { label: "Resources", link: "#Resources" },
 ];
 
 export const languages = {
