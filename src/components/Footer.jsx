@@ -91,6 +91,10 @@ const Footer = () => {
       <Divider variant="middle" className="border-1 !border-slate-800" />
       <section className=" text-center text-slate-300">
         {new Date().getFullYear()} Alpha Square Official. All Rights Reserved.
+        Designed by{" "}
+        <a href="https://www.instagram.com/hemz.designs/" target="_blank">
+          Hemanth kotla
+        </a>
       </section>
     </footer>
   );
