@@ -1,5 +1,5 @@
 import isro_image from "../assets/ISRO-Color.svg";
-import { labels, languages, navbarLinks } from "../resources/en-us";
+import { languages, navbarLinks } from "../resources/en-us";
 import { IoSearch } from "react-icons/io5";
 import enblem from "../assets/Emblem_of_India.png";
 import { FormControl, Link } from "@mui/material";
@@ -29,27 +29,17 @@ const Navbar = () => {
       }`}
     >
       {/* Logo and title */}
-      <Link href="/" underline="none" className=" flex flex-row blur-none ">
-        <div className=" w-24">
+      <Link
+        href="/"
+        underline="none"
+        className=" flex flex-row blur-none items-center "
+      >
+        <div className=" w-16">
           <img
             src={isro_image}
             className=" hover:cursor-pointer"
             alt="ISRO_LOGO"
           />
-        </div>
-        <div className=" border-l border-gray-700 mx-3 ">
-          {/* <RxDividerVertical /> */}
-        </div>
-        <div className="">
-          <h1 className=" font-bold text-[1.2rem] font-sans text-white hover:cursor-pointer">
-            {labels.indianSpace}
-          </h1>
-          <h1 className=" font-bold text-[1.2rem] font-sans text-white hover:cursor-pointer">
-            {labels.reaserchOrganization}
-          </h1>
-          <h1 className="  text-[1.2rem] font-sans text-white hover:cursor-pointer">
-            {labels.departmentOfSapce}
-          </h1>
         </div>
       </Link>
       {/* Navigation list  */}
@@ -92,7 +82,7 @@ const Navbar = () => {
             </FormControl>
           </div>
         </div>
-        <div className=" w-12">
+        <div className=" w-8">
           <img src={enblem} alt="GOI_Enblem" />
         </div>
       </div>

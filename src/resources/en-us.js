@@ -1,5 +1,6 @@
 export const labels = {
   indianSpace: "Indian Space",
+  isro: "ISRO",
   reaserchOrganization: "Research Organization",
   departmentOfSapce: "Department of Space",
   welcomeToThe: "Welcome to the",
